@@ -1,16 +1,20 @@
 import React from 'react';
 import './post-item.css';
 
-const PostItem = props => {
+const PostItem = ({ title, description, text, isVisible, onToggle }) => {
 
    return (
       <span>
-         <h2 className="item-title">{props.title}</h2>
-         <p className="item-description">{props.description}</p>
-         <p className="item-text">{props.text}</p>
+         <h2 className="post-item-title">{title}</h2>
+         <p className="post-item-description">{description}</p>
+         {isVisible ? <p className="post-item-text">{text}</p> : null}
+         <button
+            type="button"
+            onClick={onToggle}>
+            Read more
+         </button>
       </span>
    );
-
 };
 
 export default PostItem;

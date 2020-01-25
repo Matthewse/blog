@@ -21,6 +21,8 @@ body {
    background-color: #fafafa;
    color: #646464;
    font-family: 'Cabin', sans-serif;
+   font-size: 18px;
+   overflow-y: scroll;
 }
 
 ul {
