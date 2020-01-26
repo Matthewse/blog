@@ -47,6 +47,15 @@ export default class App extends Component {
       })
    }
 
+   onDelete = id => {
+      const index = this.state.posts.findIndex(post => post.id === id);
+      this.setState(state => {
+         const posts = state.posts.splice(index, 1);
+
+         return posts;
+      })
+   }
+
    render() {
       const { posts } = this.state;
 
@@ -54,7 +63,8 @@ export default class App extends Component {
          <div className="blog">
             <PostList
                posts={posts}
-               onToggle={this.onToggle} />
+               onToggle={this.onToggle}
+               onDelete={this.onDelete} />
          </div>
       )
    }

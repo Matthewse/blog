@@ -1,18 +1,18 @@
-.post-item-title {
+.post-item__title {
    margin-bottom: 20px;
    font-size: 36px;
    line-height: 46px;
    color: #000000;
 }
 
-.post-item-description {
+.post-item__description {
    margin-bottom: 20px;
    font-size: 22px;
    font-weight: lighter;
    line-height: 32px;
 }
 
-.post-item-text {
+.post-item__text {
    margin-bottom: 20px;
    line-height: 32px;
 }
@@ -25,4 +25,14 @@
    background-color: transparent;
    color: #0090b4;
    cursor: pointer;
+}
+
+.post-item__buttons-wrapper {
+   display: flex;
+   justify-content: space-between;
+}
+
+.post-item__btn--remove-btn {
+   justify-content: right;
+   margin-left: 15px;
 }
