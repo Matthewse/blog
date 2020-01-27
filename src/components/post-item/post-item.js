@@ -12,9 +12,7 @@ const PostItem = ({ title, description, text, isVisible, onToggle, onDelete }) =
             <Fragment>
                <button
                   type="button"
-                  onClick={onToggle}>
-                  Read more
-               </button>
+                  onClick={onToggle}>Read more</button>
             </Fragment>
             :
             <Fragment>
@@ -23,25 +21,19 @@ const PostItem = ({ title, description, text, isVisible, onToggle, onDelete }) =
                   <button
                      type="button"
                      className="post-item__btn--close-btn"
-                     onClick={onToggle}>
-                     Close
-                  </button>
+                     onClick={onToggle}>Close</button>
                   <div>
                      <button
                         type="button"
-                        className="post-item__btn--edit-btn">
-                        Edit
-                     </button>
+                        className="post-item__btn--edit-btn">Edit</button>
                      <button
                         type="button"
                         className="post-item__btn--remove-btn"
-                        onClick={onDelete}>
-                        Remove
-                     </button>
+                        onClick={onDelete}>Remove</button>
                   </div>
                </div>
             </Fragment>}
-      </span >
+      </span>
    );
 };
 

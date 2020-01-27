@@ -3,8 +3,11 @@ import '../../assets/fonts/fonts.css';
 import '../../assets/utility/base.css';
 import './app.css';
 import PostList from '../post-list/post-list';
+import PostAddForm from '../post-add-form/post-add-form';
 
 export default class App extends Component {
+
+   id = 10;
 
    state = {
       posts: [
@@ -47,8 +50,15 @@ export default class App extends Component {
             newPost,
             ...state.posts.slice(index + 1)
          ];
-         
+
          return { posts };
+      })
+   }
+
+   onAdd = (title, description, text) => {
+      this.setState((state) => {
+         const post = this.createPost(title, description, text);
+         return { posts: [...state.posts, post] };
       })
    }
 
@@ -64,6 +74,16 @@ export default class App extends Component {
       })
    }
 
+   createPost = (title, description, text) => {
+      return {
+         id: ++this.id,
+         title,
+         description,
+         text,
+         isVisible: false
+      };
+   }
+
    render() {
       const { posts } = this.state;
 
@@ -73,6 +93,9 @@ export default class App extends Component {
                posts={posts}
                onToggle={this.onToggle}
                onDelete={this.onDelete} />
+
+            <PostAddForm
+               onAdd={this.onAdd} />
          </div>
       )
    }
