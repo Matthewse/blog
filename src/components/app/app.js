@@ -40,19 +40,27 @@ export default class App extends Component {
    onToggle = id => {
       const index = this.state.posts.findIndex(post => post.id === id);
       this.setState(state => {
-         const { posts } = state;
-         posts[index].isVisible = !posts[index].isVisible;
-
-         return posts;
+         const oldPost = state.posts[index];
+         const newPost = { ...oldPost, isVisible: !oldPost.isVisible };
+         const posts = [
+            ...state.posts.slice(0, index),
+            newPost,
+            ...state.posts.slice(index + 1)
+         ];
+         
+         return { posts };
       })
    }
 
    onDelete = id => {
       const index = this.state.posts.findIndex(post => post.id === id);
       this.setState(state => {
-         const posts = state.posts.splice(index, 1);
+         const posts = [
+            ...state.posts.slice(0, index),
+            ...state.posts.slice(index + 1)
+         ];
 
-         return posts;
+         return { posts };
       })
    }
 
