@@ -1,19 +1,17 @@
 import React, { Fragment } from 'react';
 import './post-item.css';
 
-const PostItem = ({ title, description, text, isVisible, onToggle, onDelete }) => {
+const PostItem = ({ title, description, text, isTextVisible, onToggleText, onDelete }) => {
 
    return (
       <span>
          <h2 className="post-item__title">{title}</h2>
          <p className="post-item__description">{description}</p>
-         {!isVisible
+         {!isTextVisible
             ?
-            <Fragment>
-               <button
-                  type="button"
-                  onClick={onToggle}>Read more</button>
-            </Fragment>
+            <button
+               type="button"
+               onClick={onToggleText}>Read more</button>
             :
             <Fragment>
                <p className="post-item__text">{text}</p>
@@ -21,7 +19,7 @@ const PostItem = ({ title, description, text, isVisible, onToggle, onDelete }) =
                   <button
                      type="button"
                      className="post-item__btn--close-btn"
-                     onClick={onToggle}>Close</button>
+                     onClick={onToggleText}>Close</button>
                   <div>
                      <button
                         type="button"
