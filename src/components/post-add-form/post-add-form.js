@@ -7,7 +7,7 @@ export default class PostAddForm extends Component {
       title: '',
       description: '',
       text: '',
-      error: ' '
+      error: ''
    }
 
    validate = () => {
@@ -36,6 +36,8 @@ export default class PostAddForm extends Component {
    };
 
    render() {
+      const { title, description, text, error } = this.state;
+
       return (
          <form
             className="form"
@@ -44,28 +46,28 @@ export default class PostAddForm extends Component {
                <label className="form__label">Title</label>
                <input
                   className="form__input form__input-title"
-                  value={this.state.title}
+                  value={title}
                   onChange={event => this.onChange(event, "title")}></input>
             </div>
             <div className="form__item">
                <label className="form__label">Description</label>
                <textarea
                   className="form__input form__input-description"
-                  value={this.state.description}
+                  value={description}
                   onChange={event => this.onChange(event, "description")}></textarea>
             </div>
             <div className="form__item">
                <label className="form__label">Text</label>
                <textarea
                   className="form__input form__input-text"
-                  value={this.state.text}
+                  value={text}
                   onChange={event => this.onChange(event, "text")}></textarea>
             </div>
             <div className="form__item-error-wrapper">
-               <div className="form__item-error-message">{this.state.error}</div>
+               <div className="form__item-error-message">{error}</div>
                <button
                   className="form__button"
-                  type="submit">Add new post</button>
+                  type="submit">Add post</button>
             </div>
          </form>
       );

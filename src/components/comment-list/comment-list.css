@@ -1,0 +1,9 @@
+.comment-list {
+   width: 350px;
+}
+
+.comment-item {
+   border-bottom: 1px solid #dddddd;
+   margin-bottom: 20px;
+   padding-bottom: 15px;
+}

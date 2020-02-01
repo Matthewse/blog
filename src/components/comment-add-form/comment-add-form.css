@@ -1,0 +1,60 @@
+.comment-form {
+   width: 350px;
+   margin: 40px 0;
+   border: 1px solid #ddd;
+   border-radius: 5px;
+   padding: 15px 15px 13px;
+   box-sizing: border-box;
+}
+
+.comment-form__item {
+   margin-bottom: 10px;
+}
+
+.form__button--comment-btn {
+   font-size: 15px;
+   font-weight: 700;
+   outline: none;
+   border: none;
+   background-color: transparent;
+   color: #0090b4;
+   cursor: pointer;
+}
+
+.comment-form__input {
+   padding: 10px;
+   min-height: 20px;
+   width: 100%;
+   border-radius: 5px;
+   border: 1px solid #ddd;
+   font-size: 18px;
+   font-family: 'Cabin', sans-serif;
+   resize: vertical;
+   white-space: pre;
+   box-sizing: border-box;
+}
+
+.comment-form__input-text {
+   min-height: 50px;
+}
+
+.comment-form__input:focus {
+   outline: 0;
+   border: 1px solid #0090b4;
+}
+
+.comment-form__item-error-message {
+   font-size: 15px;
+   font-weight: 700;
+   color: #ff3c00;
+}
+
+.comment-form__item-error-wrapper {
+   display: flex;
+   justify-content: space-between;
+}
+
+input::placeholder, 
+textarea::placeholder {
+   color: #c5c3c3;
+}

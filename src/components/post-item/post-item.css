@@ -17,7 +17,7 @@
    line-height: 32px;
 }
 
-.post-item button {
+.post-item__btn {
    font-size: 15px;
    font-weight: 700;
    outline: none;
@@ -35,4 +35,5 @@
 .post-item__btn--remove-btn {
    justify-content: right;
    margin-left: 15px;
+   color: #ff3c00;
 }

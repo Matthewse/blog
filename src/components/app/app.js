@@ -62,7 +62,7 @@ export default class App extends Component {
    onAdd = (title, description, text) => {
       this.setState(state => {
          const post = this.createPost(title, description, text);
-         return { posts: [...state.posts, post] };
+         return { posts: [...state.posts, post], isFormVisible: !this.state.isFormVisible };
       })
    }
 
@@ -89,7 +89,7 @@ export default class App extends Component {
    }
 
    render() {
-      const { posts } = this.state;
+      const { posts, isFormVisible } = this.state;
 
       return (
          <div className="blog">
@@ -98,7 +98,7 @@ export default class App extends Component {
                onToggleText={this.onToggleText}
                onDelete={this.onDelete} />
 
-            {!this.state.isFormVisible
+            {!isFormVisible
                ? <button
                   className="open-form-button"
                   onClick={this.onToggleForm}>Сreate a new post</button>
