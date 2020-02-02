@@ -2,7 +2,7 @@ import React from 'react';
 import './comment-list.css';
 import CommentItem from '../comment-item/comment-item';
 
-const CommentList = ({ comments }) => {
+const CommentList = ({ comments, onDeleteComment }) => {
 
    const items = comments.map(comment => {
       const { id, ...commentsProps } = comment;
@@ -11,6 +11,7 @@ const CommentList = ({ comments }) => {
          <li key={id} className="comment-item">
             <CommentItem
                {...commentsProps}
+               onDeleteComment={() => onDeleteComment(id)}
             />
          </li>
       );

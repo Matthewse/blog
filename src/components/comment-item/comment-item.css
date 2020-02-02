@@ -1,3 +1,14 @@
+.comment-item {
+   border-bottom: 1px solid #dddddd;
+   margin-bottom: 20px;
+   padding-bottom: 15px;
+}
+
+.comment-item__wrapper {
+   display: flex;
+   justify-content: space-between;
+}
+
 .comment-item__name {
    color: #000000;
    font-size: 20px;
@@ -6,4 +17,19 @@
 .comment-item__text {
    margin-top: 7px;
    font-size: 16px;
+}
+
+.comment-item__btn {
+   display: inline;
+   font-size: 13px;
+   font-weight: 700;
+   outline: none;
+   border: none;
+   background-color: transparent;
+   color: #0090b4;
+   cursor: pointer;
+}
+
+.comment-item__btn:hover {
+   color: #ff3c00;
 }

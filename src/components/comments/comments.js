@@ -9,7 +9,9 @@ export default class Comments extends Component {
 
       return (
          <div>
-            <CommentList comments={this.props.comments} />
+            <CommentList
+               comments={this.props.comments}
+               onDeleteComment={this.props.onDeleteComment} />
             <CommentAddForm onAddComment={this.props.onAddComment} />
          </div>
       );
