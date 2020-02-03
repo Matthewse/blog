@@ -28,10 +28,15 @@ export default class PostItem extends Component {
    }
 
    createComment = (name, text) => {
+      const date = new Date();
+      const currentDate = date.toLocaleDateString('en-US',
+         { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+
       return {
          id: Math.random(),
          name,
-         text
+         text,
+         currentDate
       };
    }
 
@@ -52,7 +57,7 @@ export default class PostItem extends Component {
                   <Comments
                      onAddComment={this.onAddComment}
                      onDeleteComment={this.onDeleteComment}
-                     comments={this.state.comments}/>
+                     comments={this.state.comments} />
                   <div className="post-item__buttons-wrapper">
                      <button
                         type="button"

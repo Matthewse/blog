@@ -1,7 +1,13 @@
 .blog {
    max-width: 970px;
-   margin: 100px auto;
+   margin: 50px auto;
    padding: 30px 40px;
+}
+
+.blog__main-title {
+   font-size: 44px;
+   margin-bottom: 75px;
+   color: #006680;
 }
 
 .open-form-button,
@@ -15,6 +21,11 @@
    background-color: transparent;
    color: #0090b4;
    cursor: pointer;
+}
+
+.open-form-button:hover,
+.close-form-button:hover {
+   color: #006680;
 }
 
 .close-form-button {

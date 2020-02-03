@@ -1,7 +1,7 @@
 .comment-item {
    border-bottom: 1px solid #dddddd;
    margin-bottom: 20px;
-   padding-bottom: 15px;
+   padding-bottom: 12px;
 }
 
 .comment-item__wrapper {
@@ -19,8 +19,20 @@
    font-size: 16px;
 }
 
+.comment-item__right-side-wrapper {
+   text-align: right;
+}
+
+.comment-item__current-date {
+   min-width: 100px;
+   font-size: 14px;
+   margin-top: 5px;
+   margin-bottom: 7px;
+}
+
 .comment-item__btn {
    display: inline;
+   margin-left: auto;
    font-size: 13px;
    font-weight: 700;
    outline: none;

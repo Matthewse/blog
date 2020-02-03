@@ -93,6 +93,7 @@ export default class App extends Component {
 
       return (
          <div className="blog">
+            <h1 className="blog__main-title">Welcome to my Blog!</h1>
             <PostList
                posts={posts}
                onToggleText={this.onToggleText}

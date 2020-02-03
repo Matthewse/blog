@@ -50,6 +50,7 @@
 
 .comment-form__item-error-wrapper {
    display: flex;
+   height: 18px;
    justify-content: space-between;
 }
 

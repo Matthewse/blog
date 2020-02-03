@@ -32,8 +32,18 @@
    justify-content: space-between;
 }
 
+.post-item__btn--close-btn:hover,
+.post-item__btn--read-more:hover {
+   color: #006680;
+}
+
 .post-item__btn--remove-btn {
    justify-content: right;
    margin-left: 15px;
    color: #ff3c00;
+}
+
+.post-item__date {
+   margin-bottom: 20px;
+   font-size: 16px;
 }
