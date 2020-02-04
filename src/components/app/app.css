@@ -6,8 +6,10 @@
 
 .blog__main-title {
    font-size: 44px;
-   margin-bottom: 75px;
+   padding-bottom: 30px;
+   margin-bottom: 45px;
    color: #006680;
+   border-bottom: 1px solid #dddddd;
 }
 
 .open-form-button,
